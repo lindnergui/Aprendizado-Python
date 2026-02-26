@@ -1,6 +1,6 @@
 from random import randint
 valor = randint(1, 200)
-pagamento = str(input('Digite sua forma de pagamento: ')).lower().strip().replace(' ', '')
+pagamento = str(input('Digite sua forma de pagamento: ')).lower().strip().replace(' ', '').replace('à', 'a').replace('á', 'a')
 avista = valor - ((valor * 10) / 100)
 avistac = valor - ((valor * 5) / 100)
 cartao2 = valor

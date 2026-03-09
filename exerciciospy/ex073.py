@@ -11,7 +11,7 @@ while True:
     if escolha not in 'ABCD0':
         print('Digite opções vaĺidas entre a, b, c ou d: ')
     if escolha == 'A':
-        print(f'Os 5 primeiros colocados são: {tabela[0:6]}')
+        print(f'Os 5 primeiros colocados são: {tabela[0:5]}')
     elif escolha == 'B':
         print(f'Os últimos 4 colocados são: {tabela[16:21]}')
     elif escolha == 'C':

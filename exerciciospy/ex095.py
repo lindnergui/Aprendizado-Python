@@ -1,16 +1,22 @@
-jogadores = {}
-lista = []
-total_gols = 0
-resp = 's'
+time = list()
+jogador = dict()
+partidas = list()
+
 while True:
-    cont = 0
-    jogadores['Nome'] = str(input('Digite o nome do jogador: '))
-    jogadores['Partidas'] = int(input('Digite quantas partidas o mesmo jogou: '))
-    lista.append(jogadores.copy())
-    while cont < jogadores['Partidas']:
-        quantidade_gols = int(input(f'Quantos gols ele fez na partida {cont+1}: '))
-        cont += 1
-        total_gols += quantidade_gols
-    resp = str(input('Deseja continuar? |S| |N|: ')).strip().upper()
+    jogador.clear()
+    jogador['nome'] = str(input('Nome do Jogador: '))
+    tot = int(input(f'Quantas partidas {jogador["nome"]} jogou? '))
+    partidas.clear()
+    for c in range(0, tot):
+        partidas.append(int(input(f'   Quantos gols na partida {c+1}? ')))
+    jogador['gols'] = partidas[:] # Cria uma cópia da lista de gols
+    jogador['total'] = sum(partidas)
+    time.append(jogador.copy()) # Copia o dicionário para a lista
+    
+    while True:
+        resp = str(input('Quer continuar? [S/N] ')).upper()[0]
+        if resp in 'SN':
+            break
+        print('ERRO! Responda apenas S ou N.')
     if resp == 'N':
         break

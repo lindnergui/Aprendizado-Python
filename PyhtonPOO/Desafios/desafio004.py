@@ -20,7 +20,10 @@ class Livro:
         else:
             return 'O livro [green]já foi encerrado[/]'
 
-l1 = Livro('Memórias do Subsolo', 10, 4)
+l1 = Livro('Memórias Póstumas de Brás Cubas', 50, 4)
 print(l1.passagem_paginas())
 print(l1.passagem_paginas())
 print(l1.passagem_paginas())
+print(l1.passagem_paginas())
+print(l1.passagem_paginas())
+

@@ -6,7 +6,7 @@ class Funcionario:
         self.setor: str = setor
         self.cargo: str = cargo
 
-    def __str__(self) -> str:
+    def apresentacao(self) -> str:
         return f'Olá, sou o funcionário {self.nome} e trabalho no setor de {self.setor}, no cargo de {self.cargo}' 
 c1 = Funcionario('Guilherme', 'Administração', 'Gerente')
-print(c1)
+print(c1.apresentacao())

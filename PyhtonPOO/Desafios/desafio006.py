@@ -16,10 +16,10 @@ class Caneta:
         else:
             print(f'[{self.cor}] {frase}[/{self.cor}]')
 
-c1 = Caneta('blue')
+c1 = Caneta('red')
 
-c1.escrever('ola')
+
 c1.destampar()
 c1.escrever('olá')
-c1.tampar()
-c1.escrever('ola')
+
+

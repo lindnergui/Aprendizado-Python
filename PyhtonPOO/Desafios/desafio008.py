@@ -11,7 +11,7 @@ class Poligono(ABC):
         """Soma da área"""
         pass
 
-class Quadrado(Poligono):
+class Quadrado(Poligono): 
     
     def __init__(self, lado):
         self.lado = lado

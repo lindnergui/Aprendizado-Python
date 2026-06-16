@@ -5,12 +5,14 @@ class Avaliacao:
         self.disciplina = disciplina
         self._nota = nota
 
-    #Métodos acessores (Getters e Setters)
-    def get_nota(self): #Método Getter
+    #Atributo validável
+    @property
+    def nota(self): #getter
         return self._nota
-
-    def set_nota(self, valor): # Método Setter
+    
+    @nota.setter
+    def nota(self, valor): #setter
         if 0 <= valor <= 10:
             self._nota = valor
         else:
-            print("Nota deve ser entre 0 e 10.")
+            print("Nota deve ser entre 0 e 10.") 
